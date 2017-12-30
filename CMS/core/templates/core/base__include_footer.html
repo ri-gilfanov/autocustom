@@ -1,0 +1,66 @@
+{% load static %}
+
+
+<div class="footer__wrapper">
+    <div class="footer__container">
+        <div class="footer__section" style="flex-basis: 300px; flex-grow: 1;">
+            <h1>АДРЕСА ОТДЕЛЕНИЙ</h1>
+            <ul>
+                <li>
+                    <p class="address">г. Тюмень, ул. 30 лет Победы, 50, корп. 1 (автомагазин)</p>
+                    <p class="contacts">тел.: +7 (929) 2000-350, +7 (929) 2000-190</p>
+                </li>
+                <li>
+                    <p class="address">г. Тюмень, ул. Фабричная, 6 (автомагазин)</p>
+                    <p class="contacts">тел.: +7 (929) 2000-190, +7 (929) 2000-504</p>
+                </li>
+                <li>
+                    <p class="address">г. Тюмень, ул. Республики, 222а, ст. 1 (СТО)</p>
+                    <p class="contacts">тел.: +7 (929) 2000-053</p>
+                </li>
+                <li>
+                    <p class="address">г. Тюмень, ул. Станционная, 26в, ст. 2 (Дейтелинг центр)</p>
+                    <p class="contacts">тел.: +7 (929) 2000-053</p>
+                </li>
+            </ul>
+        </div>
+        <div class="footer__section" style="flex-basis: auto; text-align: center; align-self: center;">
+            <div>
+                <img src="{% static 'core/logo.png' %}" alt="автомагазин «AutoCustom»">
+            </div>
+        </div>
+        <div class="footer__section" style="flex-basis: 300px; flex-grow: 1;">
+            <h1>РЕЖИМ РАБОТЫ: пн-пт с 10:00 до 20:00 (без выходных)</h1>
+            <div style="display: flex; flex-wrap: wrap; align-items: center;">
+                <div>
+                    <p>Мы в социальных сетях:</p>
+                </div>
+                <div class="social_networks__container">
+                    <a href="https://vk.com/autocustom72" target="_blank">
+                        <img src="{% static 'core/social_network_icons/vk__white.png' %}">
+                    </a>
+                    <a href="" target="_blank">
+                        <img src="{% static 'core/social_network_icons/facebook__white.png' %}">
+                    </a>
+                    <a href="" target="_blank">
+                        <img src="{% static 'core/social_network_icons/youtube__white.png' %}">
+                    </a>
+                    <a href="" target="_blank">
+                        <img src="{% static 'core/social_network_icons/instagram__white.png' %}">
+                    </a>
+                </div>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; align-items: top;">
+                <div style="flex: 1 0 50%;">
+                    <a class="footer__a__btn" href="">О компании</a>
+                    <a class="footer__a__btn" href="">Обратная связь</a>
+                    <a class="footer__a__btn" href="">Наши партнёры</a>
+                </div>
+                <div style="flex: 1 0 50%;">
+                    <a class="footer__a__btn" href="">Вакансии</a>
+                    <a class="footer__a__btn" href="">Сервисный центр</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

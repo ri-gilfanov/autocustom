@@ -1,0 +1,18 @@
+.sidebar {
+    flex: 0 0 300px;
+    margin: 10px;
+}
+.sidebar__section {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    background: #4f4f4f;
+}
+.sidebar__h2 {
+    margin: 0px;
+    color: #fff;
+    background: #fe0000;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 600;
+}

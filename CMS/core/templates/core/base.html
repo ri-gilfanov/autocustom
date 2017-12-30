@@ -1,0 +1,52 @@
+{% load static %}
+{% spaceless %}
+
+
+<!DOCTYPE html>
+<html lang="ru">
+
+
+<head>
+<meta charset="utf-8"/>
+{% endspaceless %}
+
+<meta name="author" content="Руслан Ильясович Гильфанов (https://vk.com/ri_gilfanov) -- программирование, Роман Владимирович (https://vk.com/id189876156) -- дизайн"/>
+
+{% spaceless %}
+
+<link rel="stylesheet" href="{% static 'core/base.css' %}">
+<link rel="stylesheet" href="{% static 'core/base__include_header.css' %}">
+<link rel="stylesheet" href="{% static 'core/base__include_nav.css' %}">
+<link rel="stylesheet" href="{% static 'sliders/include.css' %}">
+<link rel="stylesheet" href="{% static 'core/base__content.css' %}">
+<link rel="stylesheet" href="{% static 'core/base__include_footer.css' %}">
+<link rel="stylesheet" href="{% static 'core/base__include_address.css' %}">
+<link rel="stylesheet" href="{% static 'core/base__include_sidebar.css' %}">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="{% static 'fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}"/>
+{% block additional_static %}{% endblock %}
+
+<title>{% block page_title %}{% endblock %} \\ {{ site_name }} — {{ site_description }}</title>
+</head>
+
+
+<body>
+    {% include 'core/base__include_header.html' %}
+    {% include 'core/base__include_nav.html' %}
+    {% block slider %}{% endblock %}
+    <main class="main__wrapper">
+        <div class="main__container">
+            <header class="main__header">
+                <div class="main__bread_crumbs">{% block bread_crumbs %}{% endblock %}</div>
+                <div class="main__page_header"><h1>{% block page_h1 %}{% endblock %}</h1></div>
+            </header>
+            {% block sidebar__left %}{% endblock %}
+            <div class="main__content">{% block site_content %}{% endblock %}</div>
+            {% block sidebar__right %}{% endblock %}
+        </div>
+    </main>
+    {% include 'core/base__include_footer.html' %}
+    {% include 'core/base__include_address.html' %}
+</body>
+</html>
+{% endspaceless %}

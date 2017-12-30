@@ -1,0 +1,85 @@
+{% extends "store/base.html" %}
+{% load static mptt_tags %}
+
+{% block additional_static %}
+    <link rel="stylesheet" href="{% static 'store/base__include_nav.css' %}">
+    <link rel="stylesheet" href="{% static 'store/base.css' %}">
+{% endblock %}
+
+{% block page_title %}
+    {{ category.name }}
+    {% if category %}
+        {% for node in category.get_ancestors reversed %}
+            \ {{ node.name }}
+        {% endfor %}
+        \ Каталог товаров
+    {% else %}
+        Каталог товаров
+    {% endif %}
+{% endblock %}
+
+{% block bread_crumbs %}
+    <a href="{% url 'main_page' %}">Главная</a>
+    <span> / </span>
+    <a href="{% url 'store__category__0' %}">Каталог товаров</a>
+    <span> / </span>
+    {% for node in category.get_ancestors %}
+        {% if node.parent.parent.parent %}
+            {% url 'store__category__4' slug_4=node.parent.parent.parent.slug slug_3=node.parent.parent.slug slug_2=node.parent.slug slug_1=node.slug as store__category %}
+        {% else %}
+            {% if node.parent.parent %}
+                {% url 'store__category__3' slug_3=node.parent.parent.slug slug_2=node.parent.slug slug_1=node.slug as store__category %}
+            {% else %}
+                {% if node.parent %}
+                    {% url 'store__category__2' slug_2=node.parent.slug slug_1=node.slug as store__category %}
+                {% else %}
+                    {% if node %}
+                        {% url 'store__category__1' slug_1=node.slug as store__category %}
+                    {% endif %}
+                {% endif %}
+            {% endif %}
+        {% endif %}
+        <a href="{{ store__category }}">{{ node.name }}</a>
+        <span> / </span>
+    {% endfor %}
+{% endblock %}
+
+{% block page_h1 %}{{ category }}{% endblock %}
+
+{% block site_content %}
+        <div class="products_tyles__wrapper container__grid_250">
+        {% for obj in products %}
+            <article>
+                <a class="product_tyle__a" href="{% url 'store__product' obj.slug %}">
+                    <div class="product_tyle__image_wrapper">
+                        {% if obj.photo %}
+                            <img src="{{ obj.photo.url }}">
+                        {% else %}
+                            <img src="{% static 'store/product_default.png' %}">
+                        {% endif %}
+                    </div>
+                    <h1 class="product_tyle__h1">{{ obj }}</h1>
+                </a>
+                <div style="display: flex; align-items: center;">
+                    <div style="display: flex; flex: 1 1 auto; align-items: center; font-size: 1.5em;">
+                        <span style="font-weight: 600;">{{ obj.base_price }}</span>
+                        <span>&nbsp;</span>
+                        <span class="fa fa-rub"></span>
+                    </div>
+                    <a href="" class="btn btn__std btn__red"><img src="{% static 'core/image_icons/shopping_cart.png' %}"></a>
+                </div>
+            </article>
+        {% endfor %}
+        </div>
+{% endblock %}
+
+
+
+
+{% block sidebar__right %}
+    <aside class="sidebar">
+        <section class="sidebar__section">
+            <h1 class="sidebar__h2">ПОИСК</h1>
+        </section>
+    </aside>
+{% endblock %}

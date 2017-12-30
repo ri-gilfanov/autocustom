@@ -1,0 +1,16 @@
+/* обёртка */
+.slider__wrapper {
+    background: #4c4c4c;
+    color: #fff;
+    min-height: 250px;
+}
+
+/* контейнер */
+.slider__container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 1190px;
+    padding: 0 10px;
+    width: 100%;
+}

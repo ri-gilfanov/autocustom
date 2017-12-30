@@ -1,0 +1,20 @@
+
+.product_tyle__image_wrapper {
+    max-height: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.product_tyle__image_wrapper img {
+    max-height: 240px;
+}
+.product_tyle__h1 {
+    font-size: 1em;
+    margin: 0px;
+    padding: 5px;
+    
+}
+.product_tyle__a {
+    display: block;
+    min-height: calc(240px + 3.5em);
+}

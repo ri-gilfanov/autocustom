@@ -1,0 +1,34 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+
+{% block additional_static %}{% endblock %}
+
+
+{% block page_title %}{{ object }} \ Услуги{% endblock %}
+
+
+{% block bread_crumbs %}
+    <a href="{% url 'main_page' %}">Главная</a>
+    <span> / </span>
+{% endblock %}
+
+
+{% block page_h1 %}{{ object }}{% endblock %}
+
+
+{% block site_content %}
+    <style>
+        .service__container {
+            font-size: 17px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .service__container p:first-child {
+            margin-top: 0px;
+        }
+    </style>
+    <div class="service__container">
+        {{ object.description|safe }}
+    </div>
+{% endblock %}

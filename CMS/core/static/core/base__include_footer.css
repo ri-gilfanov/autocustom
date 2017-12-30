@@ -1,0 +1,55 @@
+/* обёртка */
+.footer__wrapper {
+    background: #4c4c4c;
+    color: #fff;
+}
+
+/* контейнер */
+.footer__container {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1190px;
+    width: 100%;
+    justify-content: center;
+}
+
+.footer__section {
+    margin: 10px;
+}
+
+/* заглавие */
+.footer__section h1 {
+    border-bottom: 2px #fff solid;
+    font-size: 1em;
+    padding-bottom: 0.5em;
+    margin-bottom: 0.5em;
+}
+.footer__section ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+.footer__section ul > li {
+    margin: 20px 0px;
+}
+.footer__section ul > li > p {
+    margin: 10px 0px;
+}
+
+
+/* ссылки подножки */
+.footer__a__btn {
+    padding: 10px;
+    display: block;
+}
+.footer__a__btn:link,
+.footer__a__btn:visited,
+.footer__a__btn:active {
+    color: #fff;
+}
+.footer__a__btn:focus,
+.footer__a__btn:hover {
+    background: rgba(0,0,0,0.2);
+    color: #fff;
+}

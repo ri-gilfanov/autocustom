@@ -1,0 +1,30 @@
+{% load static %}
+
+
+<div class="nav__wrapper">
+    <nav class="nav__container">
+        <div style="flex: 1 0 auto;">
+            <a href="{% url 'store__category__0' %}">Магазин</a>
+            <a href="{% url 'services__service' 'dejteling-centr' %}">Дейтелинг центр</a>
+            <a href="{% url 'services__service' 'sto' %}">СТО</a>
+            <a href="{% url 'services__service' 'atele' %}">Ателье</a>
+            <a href="{% url 'services__service' 'stol-zakazov' %}">Стол заказов</a>
+            <a href="">Контакты</a>
+            <a href="">О нас</a>
+        </div>
+        <div style="flex: 0 0 auto; align-items: center; display: flex;">
+            <a href="" style="display: flex; align-items: center; height: 100%; padding: 5px; margin: 0px;">
+                <img style="height: 30px; margin: 0px; display: block;" src="{% static 'core/image_icons/favorite__white.svg' %}">
+                <span></span>
+            </a>
+            <a href="" style="display: flex; align-items: center; height: 100%; padding: 5px; margin: 0px;">
+                <img style="height: 30px; margin: 0px; display: block;" src="{% static 'core/image_icons/shopping_cart.png' %}">
+                <span></span>
+            </a>
+            <a href="" style="display: flex; height: 100%; align-items: center; padding: 5px; margin: 0px;">
+                <img style="height: 30px; margin: 0px; display: block;" src="{% static 'core/image_icons/log_out.png' %}">
+                <span>выход</span>
+            </a>
+        </div>
+    </nav>
+</div>

@@ -1,0 +1,26 @@
+.main__wrapper {
+    flex-grow: 1;
+}
+
+
+.main__container {
+    max-width: 100%;
+    margin: 0 auto;
+    max-width: 1190px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.main__header {
+    flex: 1 1 100%;
+    margin: 10px;
+}
+.main__header h1 {
+    margin: 0px;
+}
+
+.main__content {
+    flex: 1 1 300px;
+    margin: 10px;
+}

@@ -1,0 +1,16 @@
+*.pyc
+*.geany
+*.sqlite3
+bin/
+include/
+lib/
+lib64
+share/
+pitont.sock
+pitont_uwsgi.log
+pip-selfcheck.json
+pyvenv.cfg
+CMS/files/
+old/
+touchme
+.venv/

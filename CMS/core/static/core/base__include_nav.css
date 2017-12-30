@@ -1,0 +1,31 @@
+.nav__wrapper {
+    background: #fe0000;
+    color: #fff;
+}
+
+.nav__container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 1190px;
+    padding: 0 10px;
+    width: 100%;
+}
+
+
+/* ссылки главного меню */
+.nav__container a {
+    font-weight: bold;
+    padding: 10px;
+    display: inline-block;
+}
+.nav__container a:link,
+.nav__container a:visited,
+.nav__container a:active {
+    color: #fff;
+}
+.nav__container a:focus,
+.nav__container a:hover {
+    background: rgba(0,0,0,0.2);
+    color: #fff;
+}

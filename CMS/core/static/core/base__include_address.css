@@ -1,0 +1,20 @@
+/* обёртка */
+.address__wrapper {
+    background: #4c4c4c;
+    color: #fff;
+    width: 100%;
+}
+
+/* контейнер */
+.address__container {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1190px;
+    justify-content: center;
+}
+
+
+.address__section {
+    margin: 10px;
+}

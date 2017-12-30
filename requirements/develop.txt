@@ -1,0 +1,9 @@
+Django==1.11.1
+django-debug-toolbar
+unidecode
+django-mptt
+Pillow
+psycopg2
+pytz
+
+django-ckeditor

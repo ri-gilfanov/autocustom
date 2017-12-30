@@ -1,0 +1,38 @@
+{% extends "store/base.html" %}
+{% load static %}
+
+{% block page_title %}Тестовая страница товаров{% endblock %}
+
+{% block slider %}
+    {% include 'sliders/include.html' %}
+{% endblock %}
+
+{% block bread_crumbs %}{% endblock %}
+
+{% block page_h1 %}{% endblock %}
+
+{% block sidebar__left %}
+    {% include 'store/base__left_sidebar.html' %}
+{% endblock %}
+
+{% block site_content %}
+    <div style="margin-bottom: 10px;">
+        <a href="{% url 'services__service' 'avtovinil' %}">
+            <img src="{% static 'core/main_page__tyles/1.png' %}" alt="Автовинил">
+        </a>
+    </div>
+    <div class="container__grid_300">
+        <a href="{% url 'services__service' 'stol-zakazov' %}">
+            <img src="{% static 'core/main_page__tyles/2.png' %}" alt="Стол заказов">
+        </a>
+        <a href="{% url 'services__service' 'dejteling-centr' %}">
+            <img src="{% static 'core/main_page__tyles/3.png' %}" alt="Дейтелинг центр">
+        </a>
+        <a href="{% url 'services__service' 'sto' %}">
+            <img src="{% static 'core/main_page__tyles/4.png' %}" alt="СТО (станция технического обслуживания)">
+        </a>
+        <a href="{% url 'services__service' 'atele' %}">
+            <img src="{% static 'core/main_page__tyles/5.png' %}" alt="Ателье">
+        </a>
+    </div>
+{% endblock %}

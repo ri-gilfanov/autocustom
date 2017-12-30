@@ -1,0 +1,38 @@
+{% load mptt_tags %}
+
+
+<aside class="sidebar">
+    <section class="sidebar__section">
+        <h1 class="sidebar__h2">КАТАЛОГ ТОВАРОВ</h1>
+        <ul class="topmenu">
+            {% recursetree category_tree %}
+                <li>
+                    {% if node.parent.parent.parent %}
+                        {% url 'store__category__4' slug_4=node.parent.parent.parent.slug slug_3=node.parent.parent.slug slug_2=node.parent.slug slug_1=node.slug as store__category %}
+                    {% else %}
+                        {% if node.parent.parent %}
+                            {% url 'store__category__3' slug_3=node.parent.parent.slug slug_2=node.parent.slug slug_1=node.slug as store__category %}
+                        {% else %}
+                            {% if node.parent %}
+                                {% url 'store__category__2' slug_2=node.parent.slug slug_1=node.slug as store__category %}
+                            {% else %}
+                                {% if node %}
+                                    {% url 'store__category__1' slug_1=node.slug as store__category %}
+                                {% endif %}
+                            {% endif %}
+                        {% endif %}
+                    {% endif %}
+                    <a href="{{ store__category }}">
+                        <span>{{ node.name }}</span>
+                        {% if not node.is_leaf_node %}<span class="fa fa-angle-right"></span>{% endif %}
+                    </a>
+                    {% if not node.is_leaf_node %}
+                        <ul class="submenu">
+                            {{ children }}
+                        </ul>
+                    {% endif %}
+                </li>
+            {% endrecursetree %}
+        </ul>
+    </section>
+</aside>
